@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
-import blue_logo from "../images/logo_blue.png";
+import blue_logo from "../../images/logo_blue.png";
 
 const Footer = props => {
     return (
