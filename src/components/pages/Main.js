@@ -1,12 +1,12 @@
 import React from 'react';
 import '../../style.css';
-import headset from "../images/headset.png"
-import quality from "../images/quality.png";
-import fast_delivery from "../images/fast-delivery.png";
-import best_choice from "../images/best-choice.png";
-import phoroterm from "../images/phoroterm.png";
-import prokoncept from "../images/prokoncept.png";
-import ytong from "../images/ytong.png";
+import headset from "../../images/headset.png"
+import quality from "../../images/quality.png";
+import fast_delivery from "../../images/fast-delivery.png";
+import best_choice from "../../images/best-choice.png";
+import phoroterm from "../../images/phoroterm.png";
+import prokoncept from "../../images/prokoncept.png";
+import ytong from "../../images/ytong.png";
 import MySlider from '../MySlider';
 
 const Main = props => {
@@ -49,7 +49,7 @@ const Main = props => {
                     </div>
                 </section>
                 <section id="slider">
-                    
+                    <MySlider />
                 </section>
                 <section id="build" className="pt-6 px-3">
                     <div className="ml-4">
