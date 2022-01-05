@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Before you want to run the project run these commands:
+
+### `npm install react-router-dom`
+### `npm install react-router-hash-link`
+### `npm install react-script-tag`
+
 In the project directory, you can run:
 
 ### `npm start`
