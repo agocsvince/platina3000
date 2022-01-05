@@ -10,6 +10,7 @@ Before you want to run the project run these commands:
 ### `npm install react-router-hash-link`
 ### `npm install react-script-tag`
 ### `npm install swiper@6.8.4`
+### `npm install react-image-lightbox`
 
 In the project directory, you can run:
 
