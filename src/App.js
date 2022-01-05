@@ -4,6 +4,8 @@ import Footer from "./components/layouts/Footer";
 import Header from "./components/layouts/Header";
 import { ReferenceProvider } from './components/ReferenceContext';
 import { MostEpulProvider } from './components/MostEpulContext';
+import Main from './components/pages/Main';
+
 
 const App = props => {
   return (
