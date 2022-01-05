@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from 'react-router-dom';
+import Footer from "./components/layouts/Footer";
+import Header from "./components/layouts/Header";
+import { ReferenceProvider } from './components/ReferenceContext';
+import { MostEpulProvider } from './components/MostEpulContext';
+import Main from './components/pages/Main';
+import Elado from './components/pages/Elado';
+import References from './components/pages/References';
+import MostEpuls from './components/pages/MostEpuls';
+import ReferenceDetail from './components/ReferenceDetail';
+import MostEpulDetail from './components/MostEpulDetail';
 
-function App() {
+
+const App = props => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <ReferenceProvider>
+      <MostEpulProvider>
+      <Routes>
+            <Route exact path='/' element={<Main />}/>
+            <Route path='/referenciak' element={<References />}/>
+            <Route path='/referenciak/:project' element={<ReferenceDetail />}/>
+            <Route path='/most-epul' element={<MostEpuls />}/>
+            <Route path='/most-epul/:project' element={<MostEpulDetail />}/>
+            <Route path='/elado' element={<Elado />}/>
+        </Routes>
+      </MostEpulProvider>
+      </ReferenceProvider>
+      <Footer />
     </div>
   );
 }
