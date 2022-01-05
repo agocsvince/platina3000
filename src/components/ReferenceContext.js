@@ -1,5 +1,5 @@
 import React, {useState, useEffect, createContext } from 'react';
-import UrlMaker from './components/UrlMaker';
+import UrlMaker from './UrlMaker';
 
 export const ReferenceContext = createContext();
 
