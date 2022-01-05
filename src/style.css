@@ -36,27 +36,24 @@
 
 @font-face {
   font-family: 'Poppins-Bold';
-  src: url("components/fonts/Poppins-Bold.ttf") format("opentype"); }
+  src: url("fonts/Poppins-Bold.ttf") format("opentype"); }
 
 @font-face {
   font-family: 'Poppins-Light';
-  src: url("components/fonts/Poppins-Light.ttf") format("opentype"); }
+  src: url("fonts/Poppins-Light.ttf") format("opentype"); }
 
 @font-face {
   font-family: 'Poppins-Regular';
-  src: url("components/fonts/Poppins-Regular.ttf") format("opentype"); }
+  src: url("fonts/Poppins-Regular.ttf") format("opentype"); }
 
 @font-face {
   font-family: 'Poppins-Medium';
-  src: url("components/fonts/Poppins-Medium.ttf") format("opentype"); }
+  src: url("fonts/Poppins-Medium.ttf") format("opentype"); }
 
 @font-face {
   font-family: 'Barlow-Medium';
-  src: url("components/fonts/Barlow-Medium.ttf") format("opentype"); }
+  src: url("fonts/Barlow-Medium.ttf") format("opentype"); }
 
-/* @font-face {
-  font-family: 'NeueMontreal-LightItalic';
-  src: url("components/fonts/NeueMontreal-LightItalic.otf") format("opentype"); } */
 header {
   background: #fff;
   position: fixed;
@@ -638,25 +635,25 @@ main {
       align-items: center;
       font-size: 15px; }
     main #house .image {
-      background-image: url("components/images/veresegyhaz-19.jpeg");
+      background-image: url("images/veresegyhaz-19.jpeg");
       background-position: center;
       background-size: cover; }
   main #work .image {
-    background-image: url("components/images/veresegyhaz-20.jpeg");
+    background-image: url("images/veresegyhaz-20.jpeg");
     background-position: center;
     background-size: cover; }
   main #key-ready .image {
-    background-image: url("components/images/veresegyhaz-16.jpeg");
+    background-image: url("images/veresegyhaz-16.jpeg");
     background-position: center;
     background-size: cover; }
   main #general .image {
-    background-image: url("components/images/veresegyhaz-5.jpeg");
+    background-image: url("images/veresegyhaz-5.jpeg");
     background-position: center;
     background-size: cover; }
   main #build {
     background-color: #F9FBFC; }
     main #build .image {
-      background-image: url("components/images/veresegyhaz-14.jpeg");
+      background-image: url("images/veresegyhaz-14.jpeg");
       background-position: center;
       background-size: cover; }
   main #build-2 {
@@ -664,7 +661,7 @@ main {
   main #build-3 {
     background-color: #F9FBFC; }
     main #build-3 .image {
-      background-image: url("components/images/veresegyhaz-17.jpeg");
+      background-image: url("images/veresegyhaz-17.jpeg");
       background-position: center;
       background-size: cover; }
   main #prices p strong {
