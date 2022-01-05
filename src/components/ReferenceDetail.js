@@ -40,7 +40,7 @@ const ReferenceDetail = props => {
     }, [title, references, isLoaded])
 
     return (
-        <section id="wip" className="py-1">
+        <section id="wip" className="py-6">
                 <div className="text ml-4 mt-2">
                 <Link to='/referenciak' style={{ fontSize:'20px' }} className="fas">&#xf060;</Link>
                     <h4 className="mb-05"><strong className="slash">\</strong> Referenciák</h4>
