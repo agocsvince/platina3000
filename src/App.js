@@ -8,6 +8,8 @@ import Main from './components/pages/Main';
 import Elado from './components/pages/Elado';
 import References from './components/pages/References';
 import MostEpuls from './components/pages/MostEpuls';
+import ReferenceDetail from './components/ReferenceDetail';
+import MostEpulDetail from './components/MostEpulDetail';
 
 
 const App = props => {
@@ -19,7 +21,9 @@ const App = props => {
       <Routes>
             <Route exact path='/' element={<Main />}/>
             <Route path='/referenciak' element={<References />}/>
+            <Route path='/referenciak/:project' element={<ReferenceDetail />}/>
             <Route path='/most-epul' element={<MostEpuls />}/>
+            <Route path='/most-epul/:project' element={<MostEpulDetail />}/>
             <Route path='/elado' element={<Elado />}/>
         </Routes>
       </MostEpulProvider>
