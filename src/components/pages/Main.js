@@ -1,13 +1,14 @@
 import React from 'react';
 import '../../style.css';
+import headset from "../../images/headset.png"
+import quality from "../../images/quality.png";
+import fast_delivery from "../../images/fast-delivery.png";
+import best_choice from "../../images/best-choice.png";
+import phoroterm from "../../images/phoroterm.png";
+import prokoncept from "../../images/prokoncept.png";
+import ytong from "../../images/ytong.png";
 import { Facebook } from '../Icons';
-const headset = React.lazy(() => import("../../images/headset.png"));
-const quality = React.lazy(() => import("../../images/quality.png"));
-const fast_delivery = React.lazy(() => import("../../images/fast-delivery.png"));
-const best_choice = React.lazy(() => import("../../images/best-choice.png"));
-const phoroterm = React.lazy(() => import("../../images/phoroterm.png"));
-const prokoncept = React.lazy(() => import("../../images/prokoncept.png"));
-const ytong = React.lazy(() => import("../../images/ytong.png"));
+
 const MySlider = React.lazy(() => import('../MySlider'));
 const veresegyhaz19 =  React.lazy(() => import('../../images/veresegyhaz-19.jpeg'));
 const veresegyhaz20 =  React.lazy(() => import('../../images/veresegyhaz-20.jpeg'));
