@@ -7,15 +7,10 @@ import best_choice from "../../images/best-choice.png";
 import phoroterm from "../../images/phoroterm.png";
 import prokoncept from "../../images/prokoncept.png";
 import ytong from "../../images/ytong.png";
+import MySlider from '../MySlider';
 import { Facebook } from '../Icons';
+import ScriptTag from 'react-script-tag';
 
-const MySlider = React.lazy(() => import('../MySlider'));
-const veresegyhaz19 =  React.lazy(() => import('../../images/veresegyhaz-19.jpeg'));
-const veresegyhaz20 =  React.lazy(() => import('../../images/veresegyhaz-20.jpeg'));
-const veresegyhaz16 =  React.lazy(() => import('../../images/veresegyhaz-16.jpeg'));
-const veresegyhaz5 =  React.lazy(() => import('../../images/veresegyhaz-5.jpeg'));
-const veresegyhaz14 =  React.lazy(() => import('../../images/veresegyhaz-14.jpeg'));
-const veresegyhaz17 =  React.lazy(() => import('../../images/veresegyhaz-17.jpeg'));
 
 const Main = props => {
     
@@ -30,10 +25,10 @@ const Main = props => {
                                 <a href="#contact" className="btn"><div className="btn-text">Beszéljünk <img className="ml-05" src={headset} alt=""/></div></a>
                             </div>
                         </div>
-                        <div className="image" style={{backgroundImage: veresegyhaz19}}></div>
+                        <div className="image"></div>
                 </section>
                 <section id="work" className="grid pt-4 px-3">
-                    <div className="image ml-4" style={{backgroundImage: veresegyhaz20}}></div>
+                    <div className="image ml-4"></div>
                     <div className="text mx-4">
                         <h4 className="mb-05"><strong className="slash">\</strong> Magas elvárás a dolgozók felé</h4>
                         <h2 className="mb-2">Munkavégzés magas<br/> színvonalon</h2>
@@ -46,10 +41,10 @@ const Main = props => {
                         <h2 className="mb-2">Gyors kulcsrakész családi ház</h2>
                         <p>Mindenki még mindig abban a tévhitben él, hogy egy építkezés évekig is eltart. Ezért nem mernek belevágni. Hiszen nem akarnak még éveket albérletben vagy a szülőknél eltölteni. Sőt olyan is előfordul, hogy a házépítés elhúzódása miatt a család szétesik a sok idegeskedéstől és a feszültségektől. Cégünk hatékony kivitelező csapatával ez nem fordulhat elő, az építkezés átlagosan 8-12 hónapot vesz igénybe. Célunk, hogy minden korosztály új ház építési  problémáját teljes rugalmassággal megoldja.</p>
                     </div>
-                    <div className="image mr-4" style={{backgroundImage: veresegyhaz16}}></div>
+                    <div className="image mr-4"></div>
                 </section>
                 <section id="general" className="grid mt-6 mb-6">
-                    <div className="image ml-4" style={{backgroundImage: veresegyhaz5}}></div>
+                    <div className="image ml-4"></div>
                     <div className="text mx-4">
                         <h4 className="mb-05"><strong className="slash">\</strong> Minden munkakör egy kézben</h4>
                         <h2 className="mb-2">Generálkivitelezés</h2>
@@ -70,7 +65,7 @@ const Main = props => {
                                 <br/><br/>
                                 Ezt korábbi megrendelőink elégedettsége, ajánlásai mellett az is bizonyítja, hogy a Wienerberger zRt. Porotherm Téglaházak Rendszerének kiemelt partnereként az általunk épített családi házak folyamatos minőség ellenőrzést követően megkapják a Mesterház Minőségi Igazolást. Emellett a ProKoncept termékek beépítője és a Xella Hungária zRt. Ytong ’Kész-Ház’ programjának tagjai is vagyunk.</p>
                         </div>
-                        <div className="image mr-4" style={{backgroundImage: veresegyhaz14}}></div>
+                        <div className="image mr-4"></div>
                     </div>
                     
                 </section>
@@ -78,7 +73,7 @@ const Main = props => {
                     <p className="w-90 ml-4">A mai környezettudatos és energiatakarékos szemlélet egyre több megbízónkat ösztönöz alacsony energiafelhasználású és passzív házak építésére. Az alacsony hőátbocsátási tényezőnek (U≤0,2 W/m2k) köszönhetően hagyományos gázfűtés mellett napenergiával, talajhővel is hatékonyan üzemeltethetőek. Ehhez azonban már a tervezési fázisban kidolgozott műszaki koncepcióval kell rendelkezni, hogy az egyedi gépészeti megoldásokkal valóban komfortosan és költségkímélően működjön az épület. Cégünk a tervezést és kivitelezést is egy kézből kínálja, hogy kiszámítható határidővel minőségi otthonok születhessenek. </p>
                 </section>
                 <section id="build-3" className=" grid pb-4 px-7">
-                    <div className="image ml-4 mr-4" style={{backgroundImage: veresegyhaz17}}></div>
+                    <div className="image ml-4 mr-4"></div>
                     <div className="text w-100">
                         <p className="w-90">A házépítéssel és vásárlással kapcsolatos minden terhet - tervezés, engedélyeztetés, közműszolgáltatói nyilatkozatok beszerzése, szakhatósági engedélyek, hitelügyintézés, generál kivitelezés - leveszünk az Ön válláról.
                             <br/><br/>
@@ -98,15 +93,15 @@ const Main = props => {
                     <div className="text mx-4">
                         <h4 className="mb-05"><strong className="slash">\</strong> Áraink</h4>
                         <h2 className="mb-2">Mennyibe kerül egy négyzetméter?</h2>
-                        <p>Házépítés kapcsán általában kőművesek, villanyszerelők, burkolók és más szakiparosok munkájának szervezése jut eszünkbe. Pedig az anyagbeszerzés idő- és térbeli koordinálása, a szakhatósági engedélyek, az önkormányzati és APEH bejelentések, a közműszolgáltatók szerződései, a hitelfolyósító bankok rendelkezései, földhivatali papírok ügyintézése is kellenek ahhoz, hogy a felépült ház használatbavételi engedélyt kapjon. Ekkor van vége egy kulcsrakész építkezésnek.<br/><br/>
-                            I.kategória: 445 000 ft / m2  5%-os áfát tartalmaz<br/>
-                            II.kategória: 499 000 ft / m2  5%-os áfát tartalmaz<br/>
-                            III.kategória 599 000 ft / m2  5%-os áfát tartalmaz<br/><br/>
+                        <p>Házépítés kapcsán általában kőművesek, villanyszerelők, burkolók és más szakiparosok munkájának szervezése jut eszünkbe. Pedig az anyagbeszerzés idő- és térbeli koordinálása, a szakhatósági engedélyek, az önkormányzati és APEH bejelentések, a közműszolgáltatók szerződései, a hitelfolyósító bankok rendelkezései, földhivatali papírok ügyintézése is kellenek ahhoz, hogy a felépült ház használatbavételi engedélyt kapjon. Ekkor van vége egy kulcsrakész építkezésnek.<br/><br/>
+                            I.kategória: 445 000 ft / m2  5%-os áfát tartalmaz<br/>
+                            II.kategória: 499 000 ft / m2  5%-os áfát tartalmaz<br/>
+                            III.kategória 599 000 ft / m2  5%-os áfát tartalmaz<br/><br/>
                             A kategóriákat részletesen elküldjük önnek, hogy mit tartalmaz! <br/><br/>
                             Szerkezetkész állapot <br/>
                             I.kategória:  210 000 ft / m2  bruttó 5%-os áfát tartalmaz<br/>
                             II.kategória:  240 000 ft / m2  bruttó 5%-os áfát tartalmaz<br/>
-                            III.kategória: 280 000 ft / m2  bruttó 5%-os áfát tartalmaz<br/><br/>
+                            III.kategória: 280 000 ft / m2  bruttó 5%-os áfát tartalmaz<br/><br/>
                             Terasz költsége:  115 000 ft /m2  bruttó ár 5% áfával<br/><br/>
                             A kivitelezési áraink sík területre épülő egyszintes családi ház mind szerkezetkész és mind kulcsrakész állapotba értendők. A tereprendezés, a közműcsatlakozások, valamint a kerítések és a teraszok külön költséget képeznek, mely megbeszélés alapján fixálható. A tetőtér és alagsor beépítése esetén is az árajánlatban szereplő árak a mérvadóak. Az ajánlatban szereplő áraink az Áfa-t tartalmazzák.<br/><br/>
                             A feltüntetett árak a 2007 évi CXXVII Áfa tv. alapján  lakótérre vonatkozólag 5% áfát tartalmazzák, garázs esetében 27% áfa számítandó!
@@ -181,7 +176,7 @@ const Main = props => {
                     <div className="text mx-4">
                         <h4 className="mb-05"><strong className="slash">\</strong> Rólunk</h4>
                         <h2 className="mb-1">Cégismertető</h2>
-                        <p className="w-70 mx-1 mb-4">Cégünk 2000 óta tartó minőségpolitikájának és hosszú távú céljainak fő záloga a szakemberek kiválasztása, folyamatos képzése anyagi és erkölcsi megbecsülése. </p>
+                        <p className="w-70 mx-1 mb-4">Cégünk 2000 óta tartó minőségpolitikájának és hosszú távú céljainak fő záloga a szakemberek kiválasztása, folyamatos képzése anyagi és erkölcsi megbecsülése. </p>
                     </div>
                     <div className="grid props mb-4">
                         <div className="prop">
@@ -198,7 +193,7 @@ const Main = props => {
                         </div>
                     </div>
                     <p className="mx-6 text-left">A kezdeti lakásfelújításokat napjainkra széles körű szolgáltatásokkal kiegészült építőipari tevékenység váltotta fel. Saját telephellyel, munkagépekkel, tervezőirodával és megbízható szakembergárdával állunk ügyfeleink rendelkezésére. 
-                        Fontosnak tartjuk, hogy nemcsak az ügyfelek, de a társ -és partnerszervezetek felé is aktív a kommunikációnk. Ennek egyik legfőbb záloga, folyamatosan fejlesztett informatikai hátterünk, melynek keretei között létrehoztuk hetente frissülő fotógalériánkat, ahol minden építtetőnk nyomon követheti épülő házát weboldalunkon keresztül. Mindezen fejlesztések folyamatossága az ami garantálja, hogy a változó jogszabályi szigorításokkal és műszaki újításokkal lépést tudunk tartani. 
+                        Fontosnak tartjuk, hogy nemcsak az ügyfelek, de a társ -és partnerszervezetek felé is aktív a kommunikációnk. Ennek egyik legfőbb záloga, folyamatosan fejlesztett informatikai hátterünk, melynek keretei között létrehoztuk hetente frissülő fotógalériánkat, ahol minden építtetőnk nyomon követheti épülő házát weboldalunkon keresztül. Mindezen fejlesztések folyamatossága az ami garantálja, hogy a változó jogszabályi szigorításokkal és műszaki újításokkal lépést tudunk tartani. 
                         <br/><br/>
                         A minőséget nemcsak cégünk műszaki vezetői, hanem a beszállító partnerek szigorú licensz szerződései is garantálják ügyfeleink részére. Minden általunk épített házat folyamatosan ellenőriz a Wienerberger műszaki csoportja.
                         <br/><br/>
@@ -234,6 +229,7 @@ const Main = props => {
                         </div>
                     </div>
                 </section>
+                <ScriptTag type="text/javascript" src="../accordion.js" />
             </main>
     )
 }
