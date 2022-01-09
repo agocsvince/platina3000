@@ -10,7 +10,7 @@
   .grid.images {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 991px) {
     .grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -62,7 +62,7 @@ header {
   top: 0;
   padding: 1rem;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3); }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 991px) {
     header .logo img {
       max-width: 70%;
       width: 70%; } }
@@ -71,7 +71,7 @@ header {
     header .pages #current-page {
       color: #F58500; }
     header .pages a {
-      margin: 1rem; }
+      padding: 1rem; }
 
 .navbar {
   position: fixed;
@@ -97,6 +97,9 @@ footer {
     opacity: .3; }
   footer span {
     font-family: 'Poppins-Light'; }
+   .fab {
+     margin-right: .4rem;
+   }
   @media screen and (max-width: 767px) {
     footer {
       text-align: center; } }
@@ -848,7 +851,7 @@ main {
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg); }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   section .ml-4 {
     margin: 0 2rem !important; }
   section .mx-1 {
@@ -859,6 +862,9 @@ main {
     margin: 0 2rem !important;
     width: auto !important;
     max-width: none !important; }
+  .m-4 {
+    margin: 2rem !important;
+  }
   section .image {
     margin: 0 2rem !important; }
   section p {
