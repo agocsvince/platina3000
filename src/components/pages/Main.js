@@ -207,15 +207,21 @@ const Main = props => {
                         <h4 className="mb-05 text-center"><strong className="slash">\</strong> Kapcsolat</h4>
                         <h2 className="mb-1 text-center mb-4">Platina 3000 Kft.</h2>
                         <div className="grid mx-4 data">
-                            <p>Cím: 2340 Kiskunlacháza, Bethlen G. u. 19. <br/> Cégjegyzékszám: 13-09-087534 <br/> Adószám: 12621297-2-13 <br/> Bankszla. szám: HU61 1040 2678 0002 3787 0000 0001   K&H Bank Ráckeve
+                            <p>Cím: 2340 Kiskunlacháza, Bethlen G. u. 19.<br/>
+                                Cégjegyzékszám: 13-09-087534<br/>
+                                Adószám: 12621297-2-13<br/>
+                                Bankszla. szám: HU61 1040 2678 0002 3787 0000 0001   K&H Bank Ráckeve
                                 <br/><br/>
-                                <strong> Cégünk jogi képviselője:</strong> <br/> Bajnok és Virágh ügyvédi iroda <br/> Dr.Bajnok Zoltán ügyvéd <br/> 1055 Budapest, Szent István krt. 19.</p>
+                                <strong> Cégünk jogi képviselője:</strong><br/> 
+                                Bajnok és Virágh ügyvédi iroda<br/> 
+                                Dr.Bajnok Zoltán ügyvéd<br/> 
+                                1055 Budapest, Szent István krt. 19.</p>
                             <p><strong>Cserhalmi Róbert</strong><br/>
-                                Ügyvezető igazgató <br/><br/>
-                                
-                                Cím: 2340 Kiskunlacháza, Bethlen G. u. 19. <br/>
-                                Tel: +36 70 940 9189 <br/>
-                                Email: plutobalance@gmail.com
+                                Ügyvezető igazgató<br/><br/>
+                                Cím: 2340 Kiskunlacháza, Bethlen G. u. 19.<br/>
+                                Tel: +36 70 940 9189<br/>
+                                Email: plutobalance@gmail.com<br/>
+                                <a href='https://www.facebook.com/Platina-3000-Kft-174634789859021/' target="_blank"><i class="fab fa-facebook-square"></i><span>Facebook</span></a>
                                 </p>
                         </div>
                     </div>
