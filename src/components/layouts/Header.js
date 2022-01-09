@@ -1,9 +1,10 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import logo from "../../images/logo.png";
 import '../../style.css';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import ScriptTag from 'react-script-tag';
+import { useLocation } from 'react-router-dom';
 
 const Header = props => {
     const handleClick = useCallback(props => {
@@ -18,6 +19,20 @@ const Header = props => {
 
         props.target.id = 'current-page'
     }, [])
+
+    const location = useLocation()
+    useEffect(() => {
+        let pages = document.getElementsByClassName('pages')[0].childNodes;
+        console.log(pages)
+            pages.forEach(page => {
+                console.log(page)
+                if (location.pathname === page.href) {
+                    console.log("object")
+                }
+            })
+        
+        console.log(location.pathname)
+    }, [location])
 
     return (
         <header className="flex">
