@@ -4,6 +4,7 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import { MostEpulContext } from './MostEpulContext';
 import addStateFromUrl from './UrlReader';
+import { LeftArrow } from './Icons';
 
 const MostEpulDetail = props => {
 
@@ -40,7 +41,7 @@ const MostEpulDetail = props => {
     return (
         <section id="wip" className="py-6">
                 <div className="text ml-4 mt-2">
-                <Link to='/most-epul' style={{ fontSize:'20px' }} className="fas">&#xf060;</Link>
+                <Link to='/most-epul' style={{ fontSize:'20px' }} className="fas"><LeftArrow /></Link>
                     <h4 className="mb-05"><strong className="slash">\</strong> Most épül</h4>
                     <h2 className="mb-2" id="name" data-name={title}>{currentProject.title}</h2>
                 </div>

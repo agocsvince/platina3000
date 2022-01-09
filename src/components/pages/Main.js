@@ -8,7 +8,7 @@ import phoroterm from "../../images/phoroterm.png";
 import prokoncept from "../../images/prokoncept.png";
 import ytong from "../../images/ytong.png";
 import MySlider from '../MySlider';
-import Facebook from '../Icons';
+import { Facebook } from '../Icons';
 
 const Main = props => {
     
