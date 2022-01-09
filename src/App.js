@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Routes, Route } from 'react-router-dom';
 import Footer from "./components/layouts/Footer";
 import Header from "./components/layouts/Header";
-const Main = React.lazy(() => import('./components/pages/Main'));
+import Main from './components/pages/Main';
 const Elado = React.lazy(() => import('./components/pages/Elado'));
 const References = React.lazy(() => import('./components/pages/References'));
 const MostEpuls = React.lazy(() => import('./components/pages/MostEpuls'));

@@ -55,7 +55,6 @@ const Header = props => {
                     <span className="bar"></span>
                 </div>
                 <ScriptTag type="text/javascript" src="../scripts.js" />
-                
             </header>
             
     )
