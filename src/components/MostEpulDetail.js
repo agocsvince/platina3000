@@ -3,7 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import { MostEpulContext } from './MostEpulContext';
-import addStateFromUrl from './UrlReader';
+import { getPathNameFromUrl } from './UrlReader';
 import { LeftArrow } from './Icons';
 
 const MostEpulDetail = props => {
@@ -21,7 +21,7 @@ const MostEpulDetail = props => {
     const location = useLocation()
     if (location.state == null) {
       location.state = { title: '' }
-      location.state.title = addStateFromUrl(location.pathname)
+      location.state.title = getPathNameFromUrl(location.pathname)
     }
     const { title } = location.state
 

@@ -1,5 +1,5 @@
 
-const addStateFromUrl = (url) => {
+export const getPathNameFromUrl = (url) => {
     let perCounter = 0;
     let path = ''
     for (let char of url) {
@@ -13,5 +13,3 @@ const addStateFromUrl = (url) => {
     }
     return path
 }
-
-export default addStateFromUrl;
