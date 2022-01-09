@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import ScrollToTop from './components/ScrollToTop';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

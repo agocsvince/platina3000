@@ -1,14 +1,20 @@
 import React from 'react';
 import '../../style.css';
-import headset from "../../images/headset.png"
-import quality from "../../images/quality.png";
-import fast_delivery from "../../images/fast-delivery.png";
-import best_choice from "../../images/best-choice.png";
-import phoroterm from "../../images/phoroterm.png";
-import prokoncept from "../../images/prokoncept.png";
-import ytong from "../../images/ytong.png";
-import MySlider from '../MySlider';
 import { Facebook } from '../Icons';
+const headset = React.lazy(() => import("../../images/headset.png"));
+const quality = React.lazy(() => import("../../images/quality.png"));
+const fast_delivery = React.lazy(() => import("../../images/fast-delivery.png"));
+const best_choice = React.lazy(() => import("../../images/best-choice.png"));
+const phoroterm = React.lazy(() => import("../../images/phoroterm.png"));
+const prokoncept = React.lazy(() => import("../../images/prokoncept.png"));
+const ytong = React.lazy(() => import("../../images/ytong.png"));
+const MySlider = React.lazy(() => import('../MySlider'));
+const veresegyhaz19 =  React.lazy(() => import('../../images/veresegyhaz-19.jpeg'));
+const veresegyhaz20 =  React.lazy(() => import('../../images/veresegyhaz-20.jpeg'));
+const veresegyhaz16 =  React.lazy(() => import('../../images/veresegyhaz-16.jpeg'));
+const veresegyhaz5 =  React.lazy(() => import('../../images/veresegyhaz-5.jpeg'));
+const veresegyhaz14 =  React.lazy(() => import('../../images/veresegyhaz-14.jpeg'));
+const veresegyhaz17 =  React.lazy(() => import('../../images/veresegyhaz-17.jpeg'));
 
 const Main = props => {
     
@@ -23,10 +29,10 @@ const Main = props => {
                                 <a href="#contact" className="btn"><div className="btn-text">Beszéljünk <img className="ml-05" src={headset} alt=""/></div></a>
                             </div>
                         </div>
-                        <div className="image"></div>
+                        <div className="image" style={{backgroundImage: veresegyhaz19}}></div>
                 </section>
                 <section id="work" className="grid pt-4 px-3">
-                    <div className="image ml-4"></div>
+                    <div className="image ml-4" style={{backgroundImage: veresegyhaz20}}></div>
                     <div className="text mx-4">
                         <h4 className="mb-05"><strong className="slash">\</strong> Magas elvárás a dolgozók felé</h4>
                         <h2 className="mb-2">Munkavégzés magas<br/> színvonalon</h2>
@@ -39,10 +45,10 @@ const Main = props => {
                         <h2 className="mb-2">Gyors kulcsrakész családi ház</h2>
                         <p>Mindenki még mindig abban a tévhitben él, hogy egy építkezés évekig is eltart. Ezért nem mernek belevágni. Hiszen nem akarnak még éveket albérletben vagy a szülőknél eltölteni. Sőt olyan is előfordul, hogy a házépítés elhúzódása miatt a család szétesik a sok idegeskedéstől és a feszültségektől. Cégünk hatékony kivitelező csapatával ez nem fordulhat elő, az építkezés átlagosan 8-12 hónapot vesz igénybe. Célunk, hogy minden korosztály új ház építési  problémáját teljes rugalmassággal megoldja.</p>
                     </div>
-                    <div className="image mr-4"></div>
+                    <div className="image mr-4" style={{backgroundImage: veresegyhaz16}}></div>
                 </section>
                 <section id="general" className="grid mt-6 mb-6">
-                    <div className="image ml-4"></div>
+                    <div className="image ml-4" style={{backgroundImage: veresegyhaz5}}></div>
                     <div className="text mx-4">
                         <h4 className="mb-05"><strong className="slash">\</strong> Minden munkakör egy kézben</h4>
                         <h2 className="mb-2">Generálkivitelezés</h2>
@@ -63,7 +69,7 @@ const Main = props => {
                                 <br/><br/>
                                 Ezt korábbi megrendelőink elégedettsége, ajánlásai mellett az is bizonyítja, hogy a Wienerberger zRt. Porotherm Téglaházak Rendszerének kiemelt partnereként az általunk épített családi házak folyamatos minőség ellenőrzést követően megkapják a Mesterház Minőségi Igazolást. Emellett a ProKoncept termékek beépítője és a Xella Hungária zRt. Ytong ’Kész-Ház’ programjának tagjai is vagyunk.</p>
                         </div>
-                        <div className="image mr-4"></div>
+                        <div className="image mr-4" style={{backgroundImage: veresegyhaz14}}></div>
                     </div>
                     
                 </section>
@@ -71,7 +77,7 @@ const Main = props => {
                     <p className="w-90 ml-4">A mai környezettudatos és energiatakarékos szemlélet egyre több megbízónkat ösztönöz alacsony energiafelhasználású és passzív házak építésére. Az alacsony hőátbocsátási tényezőnek (U≤0,2 W/m2k) köszönhetően hagyományos gázfűtés mellett napenergiával, talajhővel is hatékonyan üzemeltethetőek. Ehhez azonban már a tervezési fázisban kidolgozott műszaki koncepcióval kell rendelkezni, hogy az egyedi gépészeti megoldásokkal valóban komfortosan és költségkímélően működjön az épület. Cégünk a tervezést és kivitelezést is egy kézből kínálja, hogy kiszámítható határidővel minőségi otthonok születhessenek. </p>
                 </section>
                 <section id="build-3" className=" grid pb-4 px-7">
-                    <div className="image ml-4 mr-4"></div>
+                    <div className="image ml-4 mr-4" style={{backgroundImage: veresegyhaz17}}></div>
                     <div className="text w-100">
                         <p className="w-90">A házépítéssel és vásárlással kapcsolatos minden terhet - tervezés, engedélyeztetés, közműszolgáltatói nyilatkozatok beszerzése, szakhatósági engedélyek, hitelügyintézés, generál kivitelezés - leveszünk az Ön válláról.
                             <br/><br/>

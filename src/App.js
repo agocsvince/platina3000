@@ -2,12 +2,12 @@ import React, { Suspense } from "react";
 import { Routes, Route } from 'react-router-dom';
 import Footer from "./components/layouts/Footer";
 import Header from "./components/layouts/Header";
-import Main from './components/pages/Main';
-import Elado from './components/pages/Elado';
-import References from './components/pages/References';
-import MostEpuls from './components/pages/MostEpuls';
-import ReferenceDetail from './components/ReferenceDetail';
-import MostEpulDetail from './components/MostEpulDetail';
+const Main = React.lazy(() => import('./components/pages/Main'));
+const Elado = React.lazy(() => import('./components/pages/Elado'));
+const References = React.lazy(() => import('./components/pages/References'));
+const MostEpuls = React.lazy(() => import('./components/pages/MostEpuls'));
+const ReferenceDetail = React.lazy(() => import('./components/ReferenceDetail'));
+const MostEpulDetail = React.lazy(() => import('./components/MostEpulDetail'));
 
 
 const ReferenceProvider = React.lazy(async () => await import('./components/ReferenceContext'))
