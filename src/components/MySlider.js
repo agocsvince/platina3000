@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css'
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+
+import 'swiper/swiper-bundle.css'
+
+
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 // Import Swiper styles
-
-// import 'swiper/modules/navigation/navigation.min.scss';
-// import 'swiper/modules/pagination/pagination.min.scss';
 
 
 const MySlider = props => {
