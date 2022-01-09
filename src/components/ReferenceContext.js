@@ -3,7 +3,7 @@ import UrlMaker from './UrlMaker';
 
 export const ReferenceContext = createContext();
 
-export const ReferenceProvider = (props) => {
+const ReferenceProvider = (props) => {
     // State for references
     const [references, setReferences] = useState([])
 
@@ -20,6 +20,7 @@ export const ReferenceProvider = (props) => {
             setIsLoaded(true);
             });
     },[])
+
     if (isLoaded) {
         references.forEach(reference => {
             reference.url = UrlMaker(reference.title)
@@ -31,3 +32,5 @@ export const ReferenceProvider = (props) => {
         </ReferenceContext.Provider>
     );
 }
+
+export default ReferenceProvider;

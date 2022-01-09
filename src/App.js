@@ -1,9 +1,7 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Routes, Route } from 'react-router-dom';
 import Footer from "./components/layouts/Footer";
 import Header from "./components/layouts/Header";
-import { ReferenceProvider } from './components/ReferenceContext';
-import { MostEpulProvider } from './components/MostEpulContext';
 import Main from './components/pages/Main';
 import Elado from './components/pages/Elado';
 import References from './components/pages/References';
@@ -12,10 +10,14 @@ import ReferenceDetail from './components/ReferenceDetail';
 import MostEpulDetail from './components/MostEpulDetail';
 
 
+const ReferenceProvider = React.lazy(async () => await import('./components/ReferenceContext'))
+const MostEpulProvider = React.lazy(async () => await import('./components/MostEpulContext'))
+
 const App = props => {
   return (
     <div className="App">
       <Header />
+      <Suspense fallback={<h1>Betöltés…</h1>}> 
       <ReferenceProvider>
       <MostEpulProvider>
       <Routes>
@@ -28,6 +30,7 @@ const App = props => {
         </Routes>
       </MostEpulProvider>
       </ReferenceProvider>
+      </Suspense>
       <Footer />
     </div>
   );

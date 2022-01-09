@@ -23,15 +23,15 @@ const Header = props => {
     const location = useLocation()
     useEffect(() => {
         let pages = document.getElementsByClassName('pages')[0].childNodes;
-        console.log(pages)
+        // console.log(pages)
             pages.forEach(page => {
-                console.log(page)
+                // console.log(page)
                 if (location.pathname === page.href) {
                     console.log("object")
                 }
             })
         
-        console.log(location.pathname)
+        // console.log(location.pathname)
     }, [location])
 
     return (
