@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 import blue_logo from "../../images/logo_blue.png";
+import Facebook from '../Icons';
 
 const Footer = props => {
     return (
@@ -23,7 +24,7 @@ const Footer = props => {
                     <p>2340 Kiskunlacháza, Bethlen G. u. 19.</p>
                     <p>+36 70 940 9189</p>
                     <p>plutobalance@gmail.com</p>
-                    <a href='https://www.facebook.com/Platina-3000-Kft-174634789859021/' target="_blank"><i class="fab fa-facebook-square"></i><span>Facebook</span></a>
+                    <a href='https://www.facebook.com/Platina-3000-Kft-174634789859021/' target="_blank" rel="noopener noreferrer"><Facebook /><span>Facebook</span></a>
                     
                 </div>
             </div>
