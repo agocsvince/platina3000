@@ -8,6 +8,7 @@ import phoroterm from "../../images/phoroterm.png";
 import prokoncept from "../../images/prokoncept.png";
 import ytong from "../../images/ytong.png";
 import MySlider from '../MySlider';
+import Facebook from '../Icons';
 
 const Main = props => {
     
@@ -221,7 +222,7 @@ const Main = props => {
                                 Cím: 2340 Kiskunlacháza, Bethlen G. u. 19.<br/>
                                 Tel: +36 70 940 9189<br/>
                                 Email: plutobalance@gmail.com<br/>
-                                <a href='https://www.facebook.com/Platina-3000-Kft-174634789859021/' target="_blank"><i class="fab fa-facebook-square"></i><span>Facebook</span></a>
+                                <a href='https://www.facebook.com/Platina-3000-Kft-174634789859021/' target="_blank" rel="noopener noreferrer"><Facebook /><i class="fab fa-facebook-square"></i><span>Facebook</span></a>
                                 </p>
                         </div>
                     </div>

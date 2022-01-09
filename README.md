@@ -11,6 +11,8 @@ Before you want to run the project run these commands:
 ### `npm install react-script-tag`
 ### `npm install swiper@6.8.4`
 ### `npm install react-image-lightbox`
+### `npm install --save @fortawesome/react-fontawesome`
+### `npm install --save @fortawesome/free-solid-svg-icons`
 
 In the project directory, you can run:
 
