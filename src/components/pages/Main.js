@@ -7,9 +7,9 @@ import best_choice from "../../images/best-choice.png";
 import phoroterm from "../../images/phoroterm.png";
 import prokoncept from "../../images/prokoncept.png";
 import ytong from "../../images/ytong.png";
-import MySlider from '../MySlider';
-import { Facebook } from '../Icons';
 import ScriptTag from 'react-script-tag';
+import { Facebook } from '../Icons';
+const MySlider = React.lazy(() => import('../MySlider'));
 
 
 const Main = props => {
@@ -228,8 +228,8 @@ const Main = props => {
                                 </p>
                         </div>
                     </div>
-                </section>
                 <ScriptTag type="text/javascript" src="../accordion.js" />
+                </section>
             </main>
     )
 }

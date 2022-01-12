@@ -3,22 +3,22 @@ import { Routes, Route } from 'react-router-dom';
 import Footer from "./components/layouts/Footer";
 import Header from "./components/layouts/Header";
 import Main from './components/pages/Main';
-const Elado = React.lazy(() => import('./components/pages/Elado'));
-const References = React.lazy(() => import('./components/pages/References'));
-const MostEpuls = React.lazy(() => import('./components/pages/MostEpuls'));
-const ReferenceDetail = React.lazy(() => import('./components/ReferenceDetail'));
-const MostEpulDetail = React.lazy(() => import('./components/MostEpulDetail'));
-const ReferenceProvider = React.lazy(async () => await import('./components/ReferenceContext'))
-const MostEpulProvider = React.lazy(async () => await import('./components/MostEpulContext'))
+import Elado from './components/pages/Elado';
+import References from './components/pages/References';
+import MostEpuls from './components/pages/MostEpuls';
+import ReferenceDetail from './components/ReferenceDetail';
+import MostEpulDetail from './components/MostEpulDetail';
+const ReferenceProvider  = React.lazy(() => import('./components/ReferenceContext'));
+const MostEpulProvider  = React.lazy(() => import('./components/MostEpulContext'));
 
 const App = props => {
   return (
     <div className="App">
       <Header />
-      <Suspense fallback={<h1>Betöltés…</h1>}> 
+      <Suspense fallback={<div>Betoltes...</div>}>
       <ReferenceProvider>
       <MostEpulProvider>
-      <Routes>
+        <Routes>
             <Route exact path='/' element={<Main />}/>
             <Route path='/referenciak' element={<References />}/>
             <Route path='/referenciak/:project' element={<ReferenceDetail />}/>

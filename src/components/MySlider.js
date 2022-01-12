@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Autoplay, Lazy } from 'swiper';
 
 import 'swiper/swiper-bundle.css'
 
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+SwiperCore.use([Navigation, Pagination, Autoplay, Lazy]);
 
 // Import Swiper styles
 
@@ -26,6 +26,9 @@ const MySlider = props => {
             spaceBetween={30}
             centeredSlides={true}
             loop={true}
+            lazy={true}
+            watchSlidesProgress={true}
+            preloadImages={false}
             autoplay={{
                 delay:3000,
                 disableOnInteraction: false
