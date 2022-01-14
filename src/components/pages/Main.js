@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../style.css';
 import headset from "../../images/headset.png"
 import quality from "../../images/quality.png";
@@ -7,13 +7,24 @@ import best_choice from "../../images/best-choice.png";
 import phoroterm from "../../images/phoroterm.png";
 import prokoncept from "../../images/prokoncept.png";
 import ytong from "../../images/ytong.png";
-import ScriptTag from 'react-script-tag';
+// import ScriptTag from 'react-script-tag';
 import { Facebook } from '../Icons';
 const MySlider = React.lazy(() => import('../MySlider'));
 
 
 const Main = props => {
-    
+    useEffect(() => {
+        // document.body.insertAdjacentHTML('beforeend', `<script src='/accordion.js' id='hamburger'></script>`)
+        const script = document.createElement('script');
+
+        script.src = '/accordion.js';
+        script.id = 'hamburger'
+      
+        document.body.appendChild(script);
+        return () => {
+            document.body.removeChild(document.getElementById('hamburger'));
+            }
+    }, [])
     return (  
             <main>
                 <section id="house" className="grid pt-2 pb-4 pl-3">
@@ -228,7 +239,7 @@ const Main = props => {
                                 </p>
                         </div>
                     </div>
-                <ScriptTag type="text/javascript" src="../accordion.js" />
+                
                 </section>
             </main>
     )
