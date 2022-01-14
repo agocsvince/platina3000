@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import '../../style.css';
-import headset from "../../images/headset.png"
-import quality from "../../images/quality.png";
-import fast_delivery from "../../images/fast-delivery.png";
-import best_choice from "../../images/best-choice.png";
-import phoroterm from "../../images/phoroterm.png";
-import prokoncept from "../../images/prokoncept.png";
-import ytong from "../../images/ytong.png";
+import headset from "../../images/headset.webp"
+import quality from "../../images/quality.webp";
+import fast_delivery from "../../images/fast-delivery.webp";
+import best_choice from "../../images/best-choice.webp";
+import phoroterm from "../../images/phoroterm.webp";
+import prokoncept from "../../images/prokoncept.webp";
+import ytong from "../../images/ytong.webp";
 import { Facebook } from '../Icons';
 const MySlider = React.lazy(() => import('../MySlider'));
 

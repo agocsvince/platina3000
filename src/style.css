@@ -638,25 +638,25 @@ main {
       align-items: center;
       font-size: 15px; }
     main #house .image {
-      background-image: url("images/veresegyhaz-19.jpeg");
+      background-image: url("images/veresegyhaz-19.webp");
       background-position: center;
       background-size: cover; }
   main #work .image {
-    background-image: url("images/veresegyhaz-20.jpeg");
+    background-image: url("images/veresegyhaz-20.webp");
     background-position: center;
     background-size: cover; }
   main #key-ready .image {
-    background-image: url("images/veresegyhaz-16.jpeg");
+    background-image: url("images/veresegyhaz-16.webp");
     background-position: center;
     background-size: cover; }
   main #general .image {
-    background-image: url("images/veresegyhaz-5.jpeg");
+    background-image: url("images/veresegyhaz-5.webp");
     background-position: center;
     background-size: cover; }
   main #build {
     background-color: #F9FBFC; }
     main #build .image {
-      background-image: url("images/veresegyhaz-14.jpeg");
+      background-image: url("images/veresegyhaz-14.webp");
       background-position: center;
       background-size: cover; }
   main #build-2 {
@@ -664,7 +664,7 @@ main {
   main #build-3 {
     background-color: #F9FBFC; }
     main #build-3 .image {
-      background-image: url("images/veresegyhaz-17.jpeg");
+      background-image: url("images/veresegyhaz-17.webp");
       background-position: center;
       background-size: cover; }
   main #prices p strong {
