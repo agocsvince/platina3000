@@ -22,7 +22,7 @@ const Header = props => {
     return (
         <header className="flex">
                 <div className="logo">
-                    <Link to="/"><img src={logo} alt="logo"/></Link>
+                    <HashLink to="/#house"><img src={logo} alt="logo"/></HashLink>
                 </div>
                 <div className="pages mr-2">
                     <HashLink to="/#house" id='current-page' onClick={handleClick}>Főoldal</HashLink>
