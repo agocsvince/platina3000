@@ -7,14 +7,12 @@ import best_choice from "../../images/best-choice.png";
 import phoroterm from "../../images/phoroterm.png";
 import prokoncept from "../../images/prokoncept.png";
 import ytong from "../../images/ytong.png";
-// import ScriptTag from 'react-script-tag';
 import { Facebook } from '../Icons';
 const MySlider = React.lazy(() => import('../MySlider'));
 
 
 const Main = props => {
     useEffect(() => {
-        // document.body.insertAdjacentHTML('beforeend', `<script src='/accordion.js' id='hamburger'></script>`)
         const script = document.createElement('script');
 
         script.src = '/accordion.js';
