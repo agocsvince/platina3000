@@ -62,10 +62,13 @@ header {
   top: 0;
   padding: 1rem;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3); }
+  header .logo img {
+    max-width: 60%;
+    width: 60%; }
   @media screen and (max-width: 991px) {
     header .logo img {
       max-width: 70%;
-      width: 70%; } }
+      width: 50%; } }
   header .pages {
     margin: auto; }
     header .pages #current-page {
@@ -637,6 +640,9 @@ main {
       justify-content: center;
       align-items: center;
       font-size: 15px; }
+      main #headset {
+        width: 10%;
+      }
     main #house .image {
       background-image: url("images/veresegyhaz-19.webp");
       background-position: center;

@@ -26,7 +26,7 @@ const MySlider = props => {
             spaceBetween={30}
             centeredSlides={true}
             loop={true}
-            lazy={true}
+            lazy
             watchSlidesProgress={true}
             preloadImages={false}
             autoplay={{

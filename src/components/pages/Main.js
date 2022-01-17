@@ -31,7 +31,7 @@ const Main = props => {
                             <h2 className="mb-2">Családi ház építés</h2>
                             <p>A kivitelező átvállalja az építkezés minden gondját. Ráadásul mindezt olyan áron, ami minden tekintetben megéri az építtetőnek, hiszen rengeteg kellemetlenségtől, stressztől, veszekedéstől kíméli meg a megrendelőt és egész családját, ráadásul a többi cég áraival is versenyképes!</p>
                             <div className="contact mt-4">
-                                <a href="#contact" className="btn"><div className="btn-text">Beszéljünk <img className="ml-05" src={headset} alt=""/></div></a>
+                                <a href="#contact" className="btn"><div className="btn-text">Beszéljünk <img className="ml-05" src={headset} alt="headset" id='headset'/></div></a>
                             </div>
                         </div>
                         <div className="image"></div>
