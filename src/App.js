@@ -8,8 +8,8 @@ import References from './components/pages/References';
 import MostEpuls from './components/pages/MostEpuls';
 import ReferenceDetail from './components/ReferenceDetail';
 import MostEpulDetail from './components/MostEpulDetail';
-const ReferenceProvider  = React.lazy(() => import('./components/ReferenceContext'));
-const MostEpulProvider  = React.lazy(() => import('./components/MostEpulContext'));
+const ReferenceProvider  = React.lazy(async () => await import('./components/ReferenceContext'));
+const MostEpulProvider  = React.lazy(async () => await import('./components/MostEpulContext'));
 
 const App = props => {
   return (

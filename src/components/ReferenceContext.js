@@ -26,6 +26,7 @@ const ReferenceProvider = (props) => {
             reference.url = UrlMaker(reference.title)
         })
     }
+    
     return(
         <ReferenceContext.Provider value={{references, isLoaded}}>
             {props.children}

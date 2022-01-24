@@ -24,15 +24,10 @@ const MostEpul = props => {
                 </div>
                 <div className="images grid m-4">
                     {state.map(mostEpul => {
-                        if (mostEpul.title !== null && mostEpul.gallery !== null) {
+                        if (mostEpul.title !== null && mostEpul.gallery.length !== 0) {
                             return (
                             <Link className="image" to={"/most-epul/" + UrlMaker(mostEpul.title)} key={mostEpul.id} state={{ title: mostEpul.url }}>
                                 <div className="reference-image" key={mostEpul.id} style={{ backgroundImage:"url(" + (mostEpul.gallery[0].url) + ")"}}/>
-                                <h3 className="mb-1">{mostEpul.title}</h3>
-                            </Link>)
-                        } else if (mostEpul.title !== null && mostEpul.gallery === null) {
-                            return (<Link className="image" to={"/most-epul/" + UrlMaker(mostEpul.title)} key={mostEpul.id} state={{ title: mostEpul.url }}>
-                                <div className="reference-image" key={mostEpul.id || 0} style={{ backgroundImage:"url(" + (mostEpul.gallery[0].url || "Nincs Kép") + ")"}}/>
                                 <h3 className="mb-1">{mostEpul.title}</h3>
                             </Link>)
                         }

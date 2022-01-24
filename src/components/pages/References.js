@@ -23,14 +23,9 @@ const References = props => {
                     </div>
                     <div className="images grid m-4">
                         {state.map(reference => {
-                        if (reference.title !== null && reference.gallery !== null) {
+                        if (reference.title !== null && reference.gallery.length !== 0) {
                             return (<Link className="image" to={"/referenciak/" + UrlMaker(reference.title)} key={reference.id} state={{ title: reference.url }}>
                                 <div className="reference-image" key={reference.id} style={{ backgroundImage:"url(" + reference.gallery[0].url + ")"}}/>
-                                <h3 className="mb-1">{reference.title}</h3>
-                            </Link>)
-                        } else if (reference.title !== null && reference.gallery === null) {
-                            return (<Link className="image" to={"/referenciak/" + UrlMaker(reference.title)} key={reference.id} state={{ title: reference.url }}>
-                                <div className="reference-image" key={reference.id} style={{ backgroundImage:"url(" + (reference.gallery[0].url || "Nincs kép") + ")"}}/>
                                 <h3 className="mb-1">{reference.title}</h3>
                             </Link>)
                         }
