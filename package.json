@@ -2,10 +2,6 @@
   "name": "platina3000",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "10.4.1",
-    "npm": "6.1.0"
-  },
   "dependencies": {
     "@babel/core": "^7.19.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
