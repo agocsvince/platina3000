@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import logo from "../../images/logo.png";
+import logo from "../../images/logo.webp";
 import '../../style.css';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
@@ -22,7 +22,7 @@ const Header = props => {
     return (
         <header className="flex">
                 <div className="logo">
-                    <Link to="/"><img src={logo} alt="logo"/></Link>
+                    <HashLink to="/#house"><img src={logo} alt="logo"/></HashLink>
                 </div>
                 <div className="pages mr-2">
                     <HashLink to="/#house" id='current-page' onClick={handleClick}>Főoldal</HashLink>
@@ -39,8 +39,7 @@ const Header = props => {
                     <span className="bar"></span>
                     <span className="bar"></span>
                 </div>
-                <ScriptTag type="text/javascript" src="../scripts.js" />
-                
+                <ScriptTag type="text/javascript" src="../hamburger.js" />
             </header>
             
     )

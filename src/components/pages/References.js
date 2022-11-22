@@ -22,12 +22,15 @@ const References = props => {
                         <h2 className="mb-2">Elkészült munkáink</h2>
                     </div>
                     <div className="images grid m-4">
-                        {state.map(reference => (
-                            <Link className="image" to={"/referenciak/" + UrlMaker(reference.title)} key={reference.id} state={{ title: reference.url }}>
+                        {state.map(reference => {
+                        if (reference.title !== null && reference.gallery.length !== 0) {
+                            return (<Link className="image" to={"/referenciak/" + UrlMaker(reference.title)} key={reference.id} state={{ title: reference.url }}>
                                 <div className="reference-image" key={reference.id} style={{ backgroundImage:"url(" + reference.gallery[0].url + ")"}}/>
                                 <h3 className="mb-1">{reference.title}</h3>
-                            </Link>
-                        ))}
+                            </Link>)
+                        }
+                        return null
+                        })}
                     </div>
                 </section>
             </main>

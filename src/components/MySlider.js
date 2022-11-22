@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css'
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+import SwiperCore, { Navigation, Pagination, Autoplay, Lazy } from 'swiper';
+
+import 'swiper/swiper-bundle.css'
+
+
+SwiperCore.use([Navigation, Pagination, Autoplay, Lazy]);
 
 // Import Swiper styles
-
-// import 'swiper/modules/navigation/navigation.min.scss';
-// import 'swiper/modules/pagination/pagination.min.scss';
 
 
 const MySlider = props => {
@@ -26,6 +26,9 @@ const MySlider = props => {
             spaceBetween={30}
             centeredSlides={true}
             loop={true}
+            lazy
+            watchSlidesProgress={true}
+            preloadImages={false}
             autoplay={{
                 delay:3000,
                 disableOnInteraction: false
