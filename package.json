@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://platina3000-6g62fh3e5-agocsvince.vercel.app/",
   "private": true,
-  "engines": {
-    "node": "18.4.1",
-    "npm": "6.1.0"
-  },
+
   "dependencies": {
     "@babel/core": "^7.19.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
