@@ -1,20 +1,33 @@
 {
   "name": "platina3000",
   "version": "0.1.0",
+  "homepage": "https://platina3000-6g62fh3e5-agocsvince.vercel.app/",
   "private": true,
+  "engines": {
+    "node": "16.4.0",
+    "npm": "6.1.0"
+  },
   "dependencies": {
+    "@babel/core": "^7.19.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "react": "^16.14.0",
-    "react-dom": "^17.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.1",
     "react-image-lightbox": "^5.1.4",
     "react-router-dom": "^6.2.1",
     "react-router-hash-link": "^2.4.3",
     "react-script-tag": "^1.1.2",
-    "react-scripts": "^2.1.3",
+    "react-scripts": "^2.1.8",
+    "react-url-image-downloader": "^1.0.2",
+    "spier": "^1.1.0",
     "swiper": "^6.8.4",
-    "web-vitals": "^2.1.2"
+    "web-vitals": "^2.1.2",
+    "webp-converter": "^2.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.47.0"
   }
 }

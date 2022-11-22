@@ -3,7 +3,7 @@ import UrlMaker from './UrlMaker';
 
 export const MostEpulContext = createContext();
 
-export const MostEpulProvider = (props) => {
+const MostEpulProvider = (props) => {
     // State for mostEpuls
     const [mostEpuls, setMostEpuls] = useState([]);
 
@@ -31,3 +31,5 @@ export const MostEpulProvider = (props) => {
         </MostEpulContext.Provider>
     );
 }
+
+export default MostEpulProvider;

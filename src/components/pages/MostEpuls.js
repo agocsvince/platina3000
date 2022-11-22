@@ -23,12 +23,16 @@ const MostEpul = props => {
                     <h2 className="mb-2">Folyamatban lévő munkáink</h2>
                 </div>
                 <div className="images grid m-4">
-                    {state.map(mostEpul => (
-                        <Link className="image" to={"/most-epul/" + UrlMaker(mostEpul.title)} key={mostEpul.id} state={{ title: mostEpul.url }}>
-                            <div className="reference-image" key={mostEpul.id} style={{ backgroundImage:"url(" + mostEpul.gallery[0].url + ")"}}/>
-                            <h3 className="mb-1">{mostEpul.title}</h3>
-                        </Link>
-                    ))}
+                    {state.map(mostEpul => {
+                        if (mostEpul.title !== null && mostEpul.gallery.length !== 0) {
+                            return (
+                            <Link className="image" to={"/most-epul/" + UrlMaker(mostEpul.title)} key={mostEpul.id} state={{ title: mostEpul.url }}>
+                                <div className="reference-image" key={mostEpul.id} style={{ backgroundImage:"url(" + (mostEpul.gallery[0].url) + ")"}}/>
+                                <h3 className="mb-1">{mostEpul.title}</h3>
+                            </Link>)
+                        }
+                        return null
+                    })}
                 </div>
             </section>
         </main>

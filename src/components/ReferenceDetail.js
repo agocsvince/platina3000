@@ -3,7 +3,8 @@ import { useLocation, Link } from 'react-router-dom';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import { ReferenceContext } from './ReferenceContext';
-import  addStateFromUrl  from './UrlReader';
+import  { getPathNameFromUrl }  from './UrlReader';
+import { LeftArrow } from './Icons';
 
 
 const ReferenceDetail = props => {
@@ -21,7 +22,7 @@ const ReferenceDetail = props => {
     const location = useLocation()
     if (location.state == null) {
       location.state = { title: '' }
-      location.state.title = addStateFromUrl(location.pathname)
+      location.state.title = getPathNameFromUrl(location.pathname)
     }
     const { title } = location.state
 
@@ -42,7 +43,7 @@ const ReferenceDetail = props => {
     return (
         <section id="wip" className="py-6">
                 <div className="text ml-4 mt-2">
-                <Link to='/referenciak' style={{ fontSize:'20px' }} className="fas">&#xf060;</Link>
+                <Link to='/referenciak' style={{ fontSize:'20px' }} className="fas"><LeftArrow /></Link>
                     <h4 className="mb-05"><strong className="slash">\</strong> Referenciák</h4>
                     <h2 className="mb-2" id="name" data-name={title}>{currentProject.title}</h2>
                 </div>
