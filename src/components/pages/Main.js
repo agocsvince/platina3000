@@ -22,7 +22,6 @@ const Main = () => {
     .then((res) => res.json())
     .then((json) => {
       setPrices(json.data.prices);
-      console.log(json.data.prices);
 
       setPriceLoaded(true)
     });
