@@ -10,22 +10,31 @@ import ytong from '../../images/ytong.webp';
 import { Facebook } from '../Icons';
 const MySlider = React.lazy(() => import('../MySlider'));
 
-const Main = (props) => {
+const Main = () => {
   const [fooldal, setFooldal] = useState([]);
+  const [prices, setPrices] = useState([]);
 
   const [isLoaded, setIsLoaded] = useState(false);
+  const [priceLoaded, setPriceLoaded] = useState(false);
 
   useEffect(() => {
+    fetch("https://api-eu-central-1.hygraph.com/v2/ckwq5z05y2e8n01xmgomm92ka/master?query=query%20Assets%20%7B%0A%20%20prices(orderBy%3A%20createdAt_ASC)%20%7B%0A%20%20%20%20price%0A%20%20%20%20category%0A%20%20%7D%0A%7D%0A&operationName=Assets")
+    .then((res) => res.json())
+    .then((json) => {
+      setPrices(json.data.prices);
+      console.log(json.data.prices);
+
+      setPriceLoaded(true)
+    });
+
     const url = `https://api-eu-central-1.graphcms.com/v2/ckwq5z05y2e8n01xmgomm92ka/master?query=query%20MyQuery%20%7B%0A%20%20fooldals%20%7B%0A%20%20%20%20fooldalKepek%20%7B%0A%20%20%20%20%20%20fileName%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20url%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&operationName=MyQuery`;
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
         setFooldal(json.data.fooldals[0].fooldalKepek);
-        console.log(json.data.fooldals[0].fooldalKepek);
 
-        setIsLoaded(true);
+      setIsLoaded(true);
       });
-
     const script = document.createElement('script');
 
     script.src = '/accordion.js';
@@ -34,14 +43,11 @@ const Main = (props) => {
     document.body.appendChild(script);
     return () => {
       document.body.removeChild(document.getElementById('hamburger'));
+      setIsLoaded(false)
     };
   }, []);
 
-  if (isLoaded) {
-    console.log(fooldal[0].url);
-  }
-
-  if (isLoaded) {
+  if (isLoaded && priceLoaded) {
     return (
       <main>
         <section id="house" className="grid pt-2 pb-4 pl-3">
@@ -244,24 +250,24 @@ const Main = (props) => {
               vége egy kulcsrakész építkezésnek.
               <br />
               <br />
-              I.kategória: 445 000 ft / m2 5%-os áfát tartalmaz
+              I.kategória: {prices[0].price || "445 000"} ft / m2 5%-os áfát tartalmaz
               <br />
-              II.kategória: 499 000 ft / m2 5%-os áfát tartalmaz
+              II.kategória: {prices[1].price || "499 000"} ft / m2 5%-os áfát tartalmaz
               <br />
-              III.kategória 599 000 ft / m2 5%-os áfát tartalmaz
+              III.kategória {prices[2].price || "599 000"} ft / m2 5%-os áfát tartalmaz
               <br />
               <br />A kategóriákat részletesen elküldjük önnek, hogy mit
               tartalmaz! <br />
               <br />
               Szerkezetkész állapot <br />
-              I.kategória: 210 000 ft / m2 bruttó 5%-os áfát tartalmaz
+              I.kategória: {prices[3].price || "210 000"} ft / m2 bruttó 5%-os áfát tartalmaz
               <br />
-              II.kategória: 240 000 ft / m2 bruttó 5%-os áfát tartalmaz
+              II.kategória: {prices[4].price || "240 000"} ft / m2 bruttó 5%-os áfát tartalmaz
               <br />
-              III.kategória: 280 000 ft / m2 bruttó 5%-os áfát tartalmaz
+              III.kategória: {prices[5].price || "280 000"} ft / m2 bruttó 5%-os áfát tartalmaz
               <br />
               <br />
-              Terasz költsége: 115 000 ft /m2 bruttó ár 5% áfával
+              Terasz költsége: {prices[6].price || "115 000"} ft /m2 bruttó ár 5% áfával
               <br />
               <br />
               A kivitelezési áraink sík területre épülő egyszintes családi ház

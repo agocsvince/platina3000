@@ -18,6 +18,10 @@ const MySlider = props => {
         fetch(url)
         .then(res => res.json())
         .then(json => setSlider(json.data.sliders[0].pictures));
+
+        return () => {
+            setSlider([])
+        }
     }, []);
 
     return (
