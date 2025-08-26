@@ -35,14 +35,22 @@ const Main = () => {
       setIsLoaded(true);
       });
     const script = document.createElement('script');
-
     script.src = '/accordion.js';
-    script.id = 'hamburger';
+    script.id = 'accordion-script';
+    script.onload = function() {
+        // Initialize accordion after script loads
+        if (window.initAccordion) {
+            window.initAccordion();
+        }
+    };
 
     document.body.appendChild(script);
     return () => {
-      document.body.removeChild(document.getElementById('hamburger'));
-      setIsLoaded(false)
+        const scriptElement = document.getElementById('accordion-script');
+        if (scriptElement) {
+            document.body.removeChild(scriptElement);
+        }
+        setIsLoaded(false);
     };
   }, []);
 
