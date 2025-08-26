@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Autoplay, Lazy } from 'swiper';
-
-import 'swiper/swiper-bundle.css'
-
-
-SwiperCore.use([Navigation, Pagination, Autoplay, Lazy]);
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
-
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const MySlider = props => {
     const [slider, setSlider] = useState([]);
@@ -30,11 +28,11 @@ const MySlider = props => {
             spaceBetween={30}
             centeredSlides={true}
             loop={true}
-            lazy
             watchSlidesProgress={true}
             preloadImages={false}
+            modules={[Navigation, Pagination, Autoplay]}
             autoplay={{
-                delay:3000,
+                delay: 3000,
                 disableOnInteraction: false
             }}
             pagination={{ clickable: true }} 

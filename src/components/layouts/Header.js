@@ -1,11 +1,12 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import logo from "../../images/logo.webp";
 import '../../style.css';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import ScriptTag from 'react-script-tag';
 
 const Header = props => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const handleClick = useCallback(props => {
         let pages = document.getElementsByClassName('pages')[0].childNodes;
         pages.forEach(element => {
@@ -16,15 +17,20 @@ const Header = props => {
             }
         });
 
-        props.target.id = 'current-page'
-    }, [])
+        props.target.id = 'current-page';
+        setIsMenuOpen(false);
+    }, []);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
-        <header className="flex">
+        <header className={`flex${isMenuOpen ? ' active' : ''}`}>
                 <div className="logo">
                     <HashLink to="/#house"><img src={logo} alt="logo"/></HashLink>
                 </div>
-                <div className="pages mr-2">
+                <div className={`pages mr-2${isMenuOpen ? ' active' : ''}`}>
                     <HashLink to="/#house" id='current-page' onClick={handleClick}>Főoldal</HashLink>
                     <HashLink to="/#work" onClick={handleClick}>Kivitelezés</HashLink>
                     <HashLink to="/#prices" onClick={handleClick}>Árak</HashLink>
@@ -34,14 +40,12 @@ const Header = props => {
                     <Link to="/elado" onClick={handleClick}>Eladó</Link>
                     <HashLink to="/#contact" onClick={handleClick}>Kapcsolat</HashLink>
                 </div>
-                <div className="hamburger">
+                <div className={`hamburger${isMenuOpen ? ' active' : ''}`} onClick={toggleMenu}>
                     <span className="bar"></span>
                     <span className="bar"></span>
                     <span className="bar"></span>
                 </div>
-                <ScriptTag type="text/javascript" src="../hamburger.js" />
             </header>
-            
     )
 }
 
