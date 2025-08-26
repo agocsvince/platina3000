@@ -33,8 +33,6 @@ const ReferenceDetail = props => {
       
   }, [title, references, isLoaded])
 
-  // PhotoSwipe initialization
-  const [lightbox, setLightbox] = useState(null);
   const [dimensions, setDimensions] = useState([]);
 
   // Get image dimensions
@@ -63,29 +61,23 @@ const ReferenceDetail = props => {
     }
   }, [gallery]);
 
-  useEffect(() => {
-    if (dimensions.length === gallery.length) {
-      // Initialize PhotoSwipe only after we have all dimensions
-      const lightboxInstance = new PhotoSwipe({
-        dataSource: gallery.map((image, index) => ({
-          src: image.url,
-          w: dimensions[index].width,
-          h: dimensions[index].height,
-          title: image.fileName
-        })),
-        showHideAnimationType: 'fade',
-        pswpModule: PhotoSwipe
-      });
+  const openPhotoSwipe = (index) => {
+    const options = {
+      dataSource: gallery.map((image, i) => ({
+        src: image.url,
+        w: dimensions[i]?.width || 1200,
+        h: dimensions[i]?.height || 800,
+        alt: image.fileName
+      })),
+      index: index,
+      showHideAnimationType: 'fade',
+      clickToCloseNonZoomable: true,
+      closeOnVerticalDrag: true
+    };
 
-      setLightbox(lightboxInstance);
-
-      return () => {
-        if (lightboxInstance) {
-          lightboxInstance.destroy();
-        }
-      };
-    }
-  }, [gallery, dimensions]);
+    const pswp = new PhotoSwipe(options);
+    pswp.init();
+  };
 
   return (
       <section id="wip" className="py-6">
@@ -99,21 +91,13 @@ const ReferenceDetail = props => {
             <div
               key={image.id}
               className="reference-image"
-              onClick={(e) => {
-                e.preventDefault();
-                if (lightbox) {
-                  lightbox.init();
-                  lightbox.goTo(index);
-                }
-              }}
+              onClick={() => openPhotoSwipe(index)}
               style={{ backgroundImage: `url(${image.url})` }}
               title={image.fileName}
             >
-              <a
-                href={image.url}
-                data-pswp-width={image.width || 1200}
-                data-pswp-height={image.height || 800}
-                aria-hidden="true"
+              <img 
+                src={image.url} 
+                alt={image.fileName}
                 style={{ display: 'none' }}
               />
             </div>
